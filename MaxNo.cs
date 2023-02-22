@@ -9,32 +9,29 @@ namespace MaxProblemUsingGenerics
 
     public class MaxNo
     {
-        public static double MaximumIntegerNumber(double firstValue, double secondValue, double thirdValue)
+        public static void MaximumString()
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
-               firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
-               firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
-          
+            string text;
+            string[] stringList;
+            int ni = 0, len, max = 0;
+
+
+            Console.Write("Enter a string :");
+            text = Console.ReadLine();
+            stringList = text.Split(' ');
+            len = stringList.Length;
+
+            for (int i = 0; i < len; i++)
             {
-                    return firstValue;
-                }
-
-                if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
-                   secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
-                   secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >= 0)
+                if (stringList[i].Length > max)
                 {
-                    return secondValue;
-                      
+                    max = stringList[i].Length;
+                    ni = i;
                 }
-
-                if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0 ||
-                   thirdValue.CompareTo(firstValue) >= 0 && thirdValue.CompareTo(secondValue) > 0 ||
-                   thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) >= 0)
-                {
-                    return thirdValue;
-                }
-                return firstValue;
             }
+
+            Console.WriteLine("Longest string:{0} \nCount of longest string:{1}", stringList[ni], max);
+            Console.ReadLine();
         }
     }
-
+}
