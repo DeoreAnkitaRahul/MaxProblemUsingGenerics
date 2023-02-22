@@ -9,7 +9,7 @@ namespace MaxProblemUsingGenerics
 
     public class MaxNo
     {
-        public static int MaximumIntegerNumber(int firstValue, int secondValue, int thirdValue)
+        public static double MaximumIntegerNumber(double firstValue, double secondValue, double thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||

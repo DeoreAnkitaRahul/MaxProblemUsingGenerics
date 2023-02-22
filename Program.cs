@@ -6,9 +6,9 @@
         {
 
            // Console.WriteLine("Welcome To Max Problem Using Generics");
-            int num1 = 70, num2 = 120, num3 = 100;
+            double num1 = 6.70, num2 = 1.20, num3 = 10.0;
 
-            int value = MaxNo.MaximumIntegerNumber(num1, num2, num3);
+            double value = MaxNo.MaximumIntegerNumber(num1, num2, num3);
 
             Console.WriteLine(value + " is greatest");
         }
