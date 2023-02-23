@@ -9,30 +9,27 @@ namespace MaxProblemUsingGenerics
 
     public class MaxNo
     {
-        public static string FindMaxString(string str1, string str2, string str3)
+        public static T FindMaxValue<T>(T value1, T value2, T value3) where T : IComparable
         {
-            if (str1.CompareTo(str2) > 0 && str1.CompareTo(str3) > 0 ||
-                str1.CompareTo(str2) >= 0 && str1.CompareTo(str3) > 0 ||
-                str1.CompareTo(str2) > 0 && str1.CompareTo(str3) >= 0
-                )
+            if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0 ||
+               value1.CompareTo(value2) >= 0 && value1.CompareTo(value3) > 0 ||
+               value1.CompareTo(value2) > 0 && value1.CompareTo(value3) >= 0)
             {
-                return str1;
+                return value1;
             }
-            if (str2.CompareTo(str1) > 0 && str2.CompareTo(str3) > 0 ||
-                str2.CompareTo(str1) >= 0 && str2.CompareTo(str3) > 0 ||
-                str2.CompareTo(str1) > 0 && str2.CompareTo(str3) >= 0
-                )
+            if (value2.CompareTo(value1) > 0 && value2.CompareTo(value3) > 0 ||
+                value2.CompareTo(value1) >= 0 && value2.CompareTo(value3) > 0 ||
+                value2.CompareTo(value1) > 0 && value2.CompareTo(value3) >= 0)
             {
-                return str2;
+                return value2;
             }
-            if (str3.CompareTo(str1) > 0 && str3.CompareTo(str2) > 0 ||
-                str3.CompareTo(str1) >= 0 && str3.CompareTo(str2) > 0 ||
-                str3.CompareTo(str1) > 0 && str3.CompareTo(str2) >= 0
-                )
+            if (value3.CompareTo(value1) > 0 && value3.CompareTo(value2) > 0 ||
+                value3.CompareTo(value1) >= 0 && value3.CompareTo(value2) > 0 ||
+                value3.CompareTo(value1) > 0 && value3.CompareTo(value2) >= 0)
             {
-                return str3;
+                return value3;
             }
-            return str1;
+            return value1;
         }
     }
 }
